@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView_backup: View {
     
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var modelData: ModelData
@@ -32,52 +32,40 @@ struct ContentView: View {
                         Image(systemName: "list.bullet")
                             .foregroundColor(colorScheme == .light ? .black : .white)
                     }))
-                //.navigationTitle("Villanueva del Pardillo")
+                    .navigationTitle("Home")
             }
             /*
              .onAppear{
-             isShowing = false
-             }
+                isShowing = false
+            }
              */
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_backup_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
-struct HomeView: View {
+struct HomeView_backup: View {
     @Environment(\.colorScheme) var colorScheme
     //Todo hacer un modo oscuro, con if colorScheme
     var body: some View {
-        //ZStack {
-        //Color(colorScheme == .light ? .white : .black)
-        NavigationView(){
-            List{
-                Image("pueblo_inicio")
-                    .resizable()
-                    .padding()
-                    .scaledToFit()
+        ZStack {
+            
+            Color(colorScheme == .light ? .white : .black)
+
+                
+            VStack(alignment: .leading) {
                 Text("Hello, world!")
                     .padding(.vertical)
                 Text(colorScheme == .dark ? "In dark mode" : "In light mode")
                     .padding(.vertical)
-                
-                Text("Sign In")
-                    .font(.system(size: 45, weight: .bold, design: .default))
-                    .foregroundColor(.red)
-                    .frame(height: 50)
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        Rectangle().fill(Color.init(red: 0/255, green: 200/255, blue: 10/255)))
                 Spacer()
             }
-            .navigationTitle("Villanueva del Pardillo")
+            
         }
-        .padding()
-        
     }
 }

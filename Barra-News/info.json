@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "title": "Inicio // Funciona de la Lectura del Json",
+        "imageName": "mic.fill"
+        
+    },
+    {
+        "id": 1,
+        "title": "Noticias",
+        "imageName": "megaphone.fill"
+        
+    },
+    {
+        "id": 2,
+        "title": "Eventos",
+        "imageName": "calendar"
+        
+    },
+    {
+        "id": 3,
+        "title": "Servicios",
+        "imageName": "location.fill"
+        
+    },
+    {
+        "id": 4,
+        "title": "Contacto",
+        "imageName": "envelope.fill"
+        
+    }
+]
